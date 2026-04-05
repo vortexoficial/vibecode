@@ -1382,8 +1382,8 @@
       bottom: 24px;
       z-index: 1100;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      flex-direction: row;
+      align-items: center;
       gap: 12px;
     }
 
@@ -1397,9 +1397,10 @@
       font-size: 0.9rem;
       font-weight: 600;
       line-height: 1.4;
+      white-space: nowrap;
       box-shadow: 0 18px 40px rgba(0,0,0,0.35);
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateX(10px);
       transition: opacity 0.35s ease, transform 0.35s ease;
       pointer-events: none;
     }
@@ -1408,7 +1409,7 @@
     .whatsapp-float:hover .whatsapp-hint,
     .whatsapp-float:focus-within .whatsapp-hint {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
     }
 
     .whatsapp-link {
@@ -1454,16 +1455,12 @@
       filter: brightness(1.08);
     }
 
-    .whatsapp-link svg {
+    .whatsapp-link img {
       position: relative;
       z-index: 1;
       width: 31px;
       height: 31px;
-      fill: none;
-      stroke: #ffffff;
-      stroke-width: 1.9;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+      display: block;
     }
 
     /* ============================================================
@@ -2279,10 +2276,7 @@
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
     >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20 11.2c0 4.4-3.58 7.97-7.99 7.97-1.36 0-2.63-.34-3.74-.94L4 19.3l1.11-4.08a7.92 7.92 0 0 1-1.1-4.02c0-4.4 3.58-7.97 7.99-7.97 4.41 0 7.99 3.57 7.99 7.97Z"/>
-        <path d="M9.37 8.63c.18-.4.39-.41.57-.41h.49c.15 0 .39.06.6.28.21.22.8.78.8 1.9 0 1.11-.82 2.2-.94 2.35-.12.15-1.62 2.48-3.94 3.38-1.93.75-2.33.6-2.76.56-.43-.05-1.39-.57-1.59-1.12-.2-.55-.2-1.02-.14-1.12.06-.1.22-.16.46-.28.24-.12 1.39-.68 1.6-.75.21-.07.36-.1.51.11.15.22.58.75.72.9.13.15.27.17.51.06.24-.12 1.02-.38 1.95-1.23.72-.66 1.21-1.47 1.35-1.72.13-.25.01-.38-.1-.5-.1-.1-.24-.26-.36-.39-.12-.13-.15-.22-.22-.37-.07-.15-.03-.29.02-.4Z"/>
-      </svg>
+      <img src="assets/whatsapp-icon.svg" alt="" aria-hidden="true" />
     </a>
   </div>
 
